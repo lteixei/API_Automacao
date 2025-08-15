@@ -27,10 +27,6 @@ API/
 │  
 └─ README.md  
 
-yaml
-Copiar
-Editar
-
 ---
 
 ## 🚀 Tecnologias Utilizadas
