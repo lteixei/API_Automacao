@@ -67,26 +67,22 @@ allure serve results
 
 ---
 
-🔹 Funcionalidades dos Testes
+## 🔹 Funcionalidades dos Testes
 Testes GET, POST, PUT e DELETE.
-
 Validação completa de schemas usando Pydantic.
-
 Testes parametrizados para múltiplos endpoints.
-
 Relatórios profissionais com Allure, organizados por feature e story.
-
 Fácil expansão para novas APIs e endpoints.
 
 ---
 
-🖼️ Exemplo de Relatório Allure
+## 🖼️ Exemplo de Relatório Allure
 
 Exemplo de relatório Allure com detalhes de testes, status e gráficos.
 
 ---
 
-📦 Exemplo de Teste
+## 📦 Exemplo de Teste
 python
 Copiar
 Editar
