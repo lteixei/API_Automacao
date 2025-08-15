@@ -125,7 +125,10 @@ Aqui está:
 markdown
 Copiar
 Editar
-# 🛠️ Automação de Testes de API
+
+---
+
+## 🛠️ Automação de Testes de API
 
 ![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python)
 ![Pytest](https://img.shields.io/badge/Pytest-7.4.0-orange?logo=pytest)
@@ -176,7 +179,7 @@ Editar
 
 1. Instale as dependências:
 
-```bash
+bash
 pip install -r requirements.txt
 Execute todos os testes:
 
@@ -191,6 +194,9 @@ Copiar
 Editar
 pytest --alluredir=results
 allure serve results
+
+---
+
 🔹 Funcionalidades dos Testes
 Testes GET, POST, PUT e DELETE.
 
@@ -202,9 +208,13 @@ Relatórios profissionais com Allure, organizados por feature e story.
 
 Fácil expansão para novas APIs e endpoints.
 
+---
+
 🖼️ Exemplo de Relatório Allure
 
 Exemplo de relatório Allure com detalhes de testes, status e gráficos.
+
+---
 
 📦 Exemplo de Teste
 python
@@ -221,7 +231,10 @@ def test_get_endpoints(endpoint, expected_count):
     data = response.json()
     assert isinstance(data, list)
     assert len(data) == expected_count
-🤝 Contribuindo
+
+---
+
+## 🤝 Contribuindo
 Faça um fork do repositório.
 
 Crie sua branch: git checkout -b minha-feature.
@@ -232,5 +245,7 @@ Envie para o repositório remoto: git push origin minha-feature.
 
 Abra um Pull Request.
 
-📄 Licença
+---
+
+## 📄 Licença
 Este projeto está licenciado sob a MIT License.
