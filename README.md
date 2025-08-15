@@ -43,14 +43,14 @@ API/
 
 ## 🧪 Como Executar os Testes
 
-1. Instale as dependências:
-pip install -r requirements.txt
+1. Instale as dependências:  
+pip install -r requirements.txt  
 
-2. Execute todos os testes:
-set PYTHONPATH=%CD% && pytest --alluredir=results
-ou
-pytest --alluredir=results
-allure serve results
+2. Execute todos os testes:  
+set PYTHONPATH=%CD% && pytest --alluredir=results  
+ou  
+pytest --alluredir=results  
+allure serve results  
 
 ---
 
