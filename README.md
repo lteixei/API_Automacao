@@ -11,21 +11,21 @@
 
 ## 📂 Estrutura do Projeto
 
-API/
-│
-├─ tests/
-│ ├─ test_api.py # Testes básicos de endpoints
-│ ├─ test_api_advanced.py # Testes avançados com validação de schemas
-│ ├─ test_api_master.py # Testes profissionais integrando múltiplos endpoints
-│ └─ test_api_profissional.py # Testes completos com parametrização e Allure
-│
-├─ utils/
-│ └─ api_client.py # Cliente API reutilizável
-│
-├─ schemas/
-│ └─ PostSchema.py # Schemas Pydantic para validação
-│
-└─ README.md
+API/  
+│  
+├─ tests/  
+│ ├─ test_api.py # Testes básicos de endpoints  
+│ ├─ test_api_advanced.py # Testes avançados com validação de schemas  
+│ ├─ test_api_master.py # Testes profissionais integrando múltiplos endpoints  
+│ └─ test_api_profissional.py # Testes completos com parametrização e Allure  
+│  
+├─ utils/  
+│ └─ api_client.py # Cliente API reutilizável  
+│  
+├─ schemas/  
+│ └─ PostSchema.py # Schemas Pydantic para validação  
+│  
+└─ README.md  
 
 yaml
 Copiar
