@@ -1,49 +1,100 @@
-# Um Projeto de Automação de Teste de API em Robot Framework
-> Projeto para ajudar os novatos a criar um portfolio 
+# Automação de Testes de API
 
-## Versioning/Versionamento
-> Esse projeto não possui um sistema de versionamento.
+Este projeto contém uma **estrutura completa de automação de testes para APIs** utilizando Python, Pytest e Pydantic, com integração de relatórios Allure.
 
-## History/Histórico
-> Esse é o primeiro release
+---
 
-## License/Licença do Projeto
-© [Conie Menezes](http://coniemenezes.com/)
+## Tecnologias Utilizadas
 
-## Getting started
-> Para tornar mais fácil para você começar a usar o seu GitHub, aqui está uma lista das próximas etapas recomendadas.
+- **Python 3.13**
+- **Pytest** - framework de testes
+- **Requests** - para chamadas HTTP
+- **Pydantic** - validação de schemas
+- **Allure** - relatórios avançados
+- **Faker** - geração de dados falsos
+- **Git** - controle de versão
 
-## Add your files
-```
-cd existing_repo
-git remote add origin https://github.com/coniemenezes/teste-automatizado-em-robotframework.git
-git branch -M main
-git push -uf origin main
-```
+---
 
-## Já é um profissional? Basta editar este README.md e torná-lo seu. 
+## Estrutura do Projeto
 
-## Configuração do projeto
->Robot framework é construído com Python, portanto, é necessário que tenhas a última versão desta tecnologia instalada em sua máquina e pode ser encontrado através na página oficial do Python.
+API/
+│
+├─ tests/
+│ ├─ test_api.py # Testes básicos de endpoints
+│ ├─ test_api_advanced.py # Testes avançados com validação de schemas
+│ ├─ test_api_master.py # Testes profissionais integrando múltiplos endpoints
+│ └─ test_api_profissional.py # Testes completos com parametrização e Allure
+│
+├─ utils/
+│ └─ api_client.py # Cliente API reutilizável
+│
+├─ schemas/
+│ └─ PostSchema.py # Schemas Pydantic para validação
+│
+└─ README.md
 
-## A instalação do framework e suas bibliotecas auxiliares é feita através do pip, gerenciador de bibliotecas nativo do Python. Proceda com o comando abaixo:
-```
-$ pip install robotframework
-```
->E verifique se a instalação ocorreu corretamente:
-```
-$ robot --version
-```
-## A seguir, proceda com a instalação das bibliotecas abaixo, através do pip:
-```
-RequestsLibrary
-Robotframework-jsonlibrary
-```
-## Execução do projeto
->Para executar os scripts, execute o comando abaixo via terminal estando dentro do diretório raiz do projeto, e passando como argumentos o diretório onde serão inseridos os relatórios e logs da execução e o diretório onde encontram-se os scripts de teste.
-```
-$ robot -d ./Reports  tests/
-```
-## Padrões de projeto e boas práticas
->Para trabalhar em um projeto com Robot Framework é fortemente recomendado que o programador leia constantemente sua documentação, e esteja atento aos padrões de projeto do Python, tecnologia utilizada para implementação do framework.
->Lembre-se sempre que o objetivo desta abordagem é construir scripts simples e legíveis. Toda complexidade adicionada ao projeto deve possuir um motivo forte e clara para existir.
+yaml
+Copiar
+Editar
+
+---
+
+## Executando os Testes
+
+1. Instale as dependências:
+
+```bash
+pip install -r requirements.txt
+Execute todos os testes:
+
+bash
+Copiar
+Editar
+pytest
+Execute com relatórios Allure:
+
+bash
+Copiar
+Editar
+pytest --alluredir=results
+allure serve results
+Funcionalidades dos Testes
+Testes GET, POST, PUT e DELETE.
+
+Validação completa de schemas usando Pydantic.
+
+Testes parametrizados para múltiplos endpoints.
+
+Relatórios profissionais com Allure, com organização por feature e story.
+
+Possibilidade de expansão para testes de APIs internas ou externas.
+
+Exemplo de Teste
+python
+Copiar
+Editar
+@pytest.mark.parametrize("endpoint, expected_count", [
+    ("/posts", 100),
+    ("/comments", 500),
+    ("/albums", 100)
+])
+def test_get_endpoints(endpoint, expected_count):
+    response = client.get(endpoint)
+    assert response.status_code == 200
+    data = response.json()
+    assert isinstance(data, list)
+    assert len(data) == expected_count
+Contribuindo
+Faça um fork do repositório.
+
+Crie sua branch: git checkout -b minha-feature.
+
+Faça suas alterações e commit: git commit -m "Descrição da alteração".
+
+Envie para o repositório remoto: git push origin minha-feature.
+
+Abra um Pull Request.
+
+Licença
+Este projeto está licenciado sob a MIT License.
