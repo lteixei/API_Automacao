@@ -18,21 +18,21 @@ Este projeto contém uma **estrutura completa de automação de testes para APIs
 
 ## Estrutura do Projeto
 
-API/
-│
-├─ tests/
-│ ├─ test_api.py # Testes básicos de endpoints
-│ ├─ test_api_advanced.py # Testes avançados com validação de schemas
-│ ├─ test_api_master.py # Testes profissionais integrando múltiplos endpoints
-│ └─ test_api_profissional.py # Testes completos com parametrização e Allure
-│
-├─ utils/
-│ └─ api_client.py # Cliente API reutilizável
-│
-├─ schemas/
-│ └─ PostSchema.py # Schemas Pydantic para validação
-│
-└─ README.md
+API/  
+│  
+├─ tests/  
+│ ├─ test_api.py # Testes básicos de endpoints  
+│ ├─ test_api_advanced.py # Testes avançados com validação de schemas  
+│ ├─ test_api_master.py # Testes profissionais integrando múltiplos endpoints  
+│ └─ test_api_profissional.py # Testes completos com parametrização e Allure  
+│  
+├─ utils/  
+│ └─ api_client.py # Cliente API reutilizável  
+│  
+├─ schemas/  
+│ └─ PostSchema.py # Schemas Pydantic para validação  
+│  
+└─ README.md  
 
 yaml
 Copiar
@@ -44,7 +44,7 @@ Editar
 
 1. Instale as dependências:
 
-```bash
+bash
 pip install -r requirements.txt
 Execute todos os testes:
 
@@ -62,70 +62,27 @@ allure serve results
 Funcionalidades dos Testes
 Testes GET, POST, PUT e DELETE.
 
-Validação completa de schemas usando Pydantic.
+Validação completa de schemas usando Pydantic.  
+Testes parametrizados para múltiplos endpoints.  
+Relatórios profissionais com Allure, com organização por feature e story.  
+Possibilidade de expansão para testes de APIs internas ou externas.  
 
-Testes parametrizados para múltiplos endpoints.
-
-Relatórios profissionais com Allure, com organização por feature e story.
-
-Possibilidade de expansão para testes de APIs internas ou externas.
-
-Exemplo de Teste
-python
-Copiar
-Editar
-@pytest.mark.parametrize("endpoint, expected_count", [
-    ("/posts", 100),
-    ("/comments", 500),
-    ("/albums", 100)
-])
+Exemplo de Teste  
+python  
+Copiar  
+Editar  
+@pytest.mark.parametrize("endpoint, expected_count", [  
+    ("/posts", 100),  
+    ("/comments", 500),  
+    ("/albums", 100)  
+])  
 def test_get_endpoints(endpoint, expected_count):
     response = client.get(endpoint)
     assert response.status_code == 200
     data = response.json()
     assert isinstance(data, list)
-    assert len(data) == expected_count
-Contribuindo
-Faça um fork do repositório.
-
-Crie sua branch: git checkout -b minha-feature.
-
-Faça suas alterações e commit: git commit -m "Descrição da alteração".
-
-Envie para o repositório remoto: git push origin minha-feature.
-
-Abra um Pull Request.
-
-Licença
-Este projeto está licenciado sob a MIT License.
-
-arduino
-Copiar
-Editar
-
-Se você quiser, posso criar **uma versão ainda mais profissional e visual**, com badges de PyPI, Python, Build, e Allure, que deixa o README parecido com repositórios grandes do GitHub.  
-
-Quer que eu faça isso?
-
-
-
-
-
-
-
-Você disse:
-crie com imagens e mais profissional
-
-
-O ChatGPT disse:
-Perfeito! Vou criar uma versão profissional e visual do README, incluindo badges, imagens de exemplo de relatório Allure, e organização por seções, para que fique parecido com repositórios grandes do GitHub.
-
-Aqui está:
-
-markdown
-Copiar
-Editar
-
+    assert len(data) == expected_count  
+    
 ---
 
 ## 🛠️ Automação de Testes de API
