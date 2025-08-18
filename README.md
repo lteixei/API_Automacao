@@ -48,9 +48,6 @@ pip install -r requirements.txt
 
 2. Execute todos os testes:  
 set PYTHONPATH=%CD% && pytest --alluredir=results  
-ou  
-pytest --alluredir=results  
-allure serve results  
 
 ---
 
@@ -87,16 +84,12 @@ def test_get_endpoints(endpoint, expected_count):
 
 ---
 
-## 🤝 Contribuindo
-Faça um fork do repositório.
+## 🤝 Boas práticas para contribuições:  
 
-Crie sua branch: git checkout -b minha-feature.
-
-Faça suas alterações e commit: git commit -m "Descrição da alteração".
-
-Envie para o repositório remoto: git push origin minha-feature.
-
-Abra um Pull Request.
+📌 Escreva código limpo, legível e documentado.  
+📌 Teste suas mudanças antes de enviar o Pull Request.  
+📌 Mantenha a consistência com o estilo e padrões do projeto.  
+📌 Discuta melhorias ou dúvidas antes de implementar grandes mudanças.
 
 ---
 
