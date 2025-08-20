@@ -31,13 +31,13 @@ API/
 
 ## 🚀 Tecnologias Utilizadas
 
-- **Python 3.13**
-- **Pytest** - framework de testes
-- **Requests** - para chamadas HTTP
-- **Pydantic** - validação de schemas
-- **Allure** - relatórios profissionais
-- **Faker** - geração de dados falsos
-- **Git** - controle de versão
+- **Python 3.13**  
+- **Pytest** - framework de testes  
+- **Requests** - para chamadas HTTP  
+- **Pydantic** - validação de schemas  
+- **Allure** - relatórios profissionais  
+- **Faker** - geração de dados falsos  
+- **Git** - controle de versão  
 
 ---
 
@@ -52,11 +52,11 @@ set PYTHONPATH=%CD% && pytest --alluredir=results
 ---
 
 ## 🔹 Funcionalidades dos Testes
-Testes GET, POST, PUT e DELETE.
-Validação completa de schemas usando Pydantic.
-Testes parametrizados para múltiplos endpoints.
-Relatórios profissionais com Allure, organizados por feature e story.
-Fácil expansão para novas APIs e endpoints.
+Testes GET, POST, PUT e DELETE.  
+Validação completa de schemas usando Pydantic.  
+Testes parametrizados para múltiplos endpoints.  
+Relatórios profissionais com Allure, organizados por feature e story.  
+Fácil expansão para novas APIs e endpoints.  
 
 ---
 
@@ -67,24 +67,31 @@ Exemplo de relatório Allure com detalhes de testes, status e gráficos.
 ---
 
 ## 📦 Exemplo de Teste
-python
-Copiar
-Editar
-@pytest.mark.parametrize("endpoint, expected_count", [
-    ("/posts", 100),
-    ("/comments", 500),
-    ("/albums", 100)
-])
-def test_get_endpoints(endpoint, expected_count):
-    response = client.get(endpoint)
-    assert response.status_code == 200
-    data = response.json()
-    assert isinstance(data, list)
-    assert len(data) == expected_count
+python  
+Copiar  
+Editar  
+@pytest.mark.parametrize("endpoint, expected_count", [  
+    ("/posts", 100),  
+    ("/comments", 500),  
+    ("/albums", 100)  
+])  
+def test_get_endpoints(endpoint, expected_count):  
+    response = client.get(endpoint)  
+    assert response.status_code == 200  
+    data = response.json()  
+    assert isinstance(data, list)  
+    assert len(data) == expected_count  
 
 ---
 
-## 🤝 Boas práticas para contribuições:  
+## 🤝 Contribuição
+
+Contribuições são bem-vindas!  
+Abra uma Issue ou envie um Pull Request com melhorias, novos cenários ou exemplos de integração.
+
+---
+
+## 🤝 Boas práticas para contribuições: 
 
 📌 Escreva código limpo, legível e documentado.  
 📌 Teste suas mudanças antes de enviar o Pull Request.  
@@ -93,5 +100,16 @@ def test_get_endpoints(endpoint, expected_count):
 
 ---
 
-## 📄 Licença
-Este projeto está licenciado sob a MIT License.
+## 👩‍💻 Contato
+
+- Informações	
+- Nome	Leonardo da Motta Teixeira  
+- Cargo	QA Engineer / Gestor / Tester-Sênior  
+- LinkedIn	www.linkedin.com/in/leonardo-da-motta-teixeira-3584734b  
+- E-mail	lteixei@hotmail.com  
+
+---
+
+## 📝 Licença
+
+- Este projeto está licenciado sob a MIT License.
