@@ -52,17 +52,18 @@ set PYTHONPATH=%CD% && pytest --alluredir=results
 ---
 
 ## 🔹 Funcionalidades dos Testes
-Testes GET, POST, PUT e DELETE.  
-Validação completa de schemas usando Pydantic.  
-Testes parametrizados para múltiplos endpoints.  
-Relatórios profissionais com Allure, organizados por feature e story.  
-Fácil expansão para novas APIs e endpoints.  
+
+- Testes GET, POST, PUT e DELETE.  
+- Validação completa de schemas usando Pydantic.  
+- Testes parametrizados para múltiplos endpoints.  
+- Relatórios profissionais com Allure, organizados por feature e story.  
+- Fácil expansão para novas APIs e endpoints.  
 
 ---
 
 ## 🖼️ Exemplo de Relatório Allure
 
-Exemplo de relatório Allure com detalhes de testes, status e gráficos.
+- Exemplo de relatório Allure com detalhes de testes, status e gráficos.
 
 ---
 
